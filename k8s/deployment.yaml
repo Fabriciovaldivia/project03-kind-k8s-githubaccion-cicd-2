@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: project03
-          image: fabriciovaldivia/project03:latest
+          image: fabriciovaldivia/project03:latest  #
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 5000
