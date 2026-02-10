@@ -1,7 +1,11 @@
 kind: Cluster
 apiVersion: kind.x-k8s.io/v1alpha4
+name: project03
 nodes:
   - role: control-plane
+    extraPortMappings:
+      - containerPort: 30008   # NodePort del Service
+        hostPort: 30008        # Puerto en la EC2
+        protocol: TCP
   - role: worker
   - role: worker
-#kind create cluster --name project03 --config kind-cluster.yaml
